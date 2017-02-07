@@ -1,6 +1,7 @@
 package scrabbleedd;
 
-import scrabbleedd.estructuras.ListaJugadores;
+import scrabbleedd.estructuras.*;
+
 
 /**
  *  FIUSAC
@@ -31,6 +32,17 @@ public class ScrabbleEDD {
 //    l.ingresarUsuario("loconmarlen");
 //    
 //    l.verListaCircular();
+
+    //Probar cola
+//    ColaFichas c = new ColaFichas();
+//    c.ingresarFicha("l");
+//    c.ingresarFicha("o");
+//    c.ingresarFicha("c");
+//    c.ingresarFicha("o");
+//    c.ingresarFicha("n");
+    
+//    c.verLista();
+    
     }
     
 }
