@@ -32,6 +32,7 @@ public class ListaDiccionario {
         }
     }
     //Mostrar la lista
+    
     public void verLista(){
         nodoD actual = new nodoD();
         actual = cabeza;
