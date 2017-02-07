@@ -14,6 +14,9 @@ public class ScrabbleEDD {
 
     public static void main(String[] args) {
         
+        Home vhome = new Home();
+        vhome.show();
+        
      //Probar lista Simple
 //    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
 //
