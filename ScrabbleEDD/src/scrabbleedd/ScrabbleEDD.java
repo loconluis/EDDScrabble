@@ -9,11 +9,15 @@ package scrabbleedd;
  */
 public class ScrabbleEDD {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+//    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
+//
+//    l.ingresarPalabra("Hola");
+//    l.ingresarPalabra("Amigos");
+//    l.ingresarPalabra("de");
+//    l.ingresarPalabra("Snapchat");
+//
+//    l.verLista();
     }
     
 }
