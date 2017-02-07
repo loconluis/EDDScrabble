@@ -1,7 +1,8 @@
 package scrabbleedd.estructuras;
 /**
  *
- * @author luisl
+ * @author luislocon
+ * LISTA SIMPLE
  */
 public class ListaDiccionario {
     //Variables
@@ -18,15 +19,15 @@ public class ListaDiccionario {
     //Metodo de insercion
     public void ingresarPalabra(String palabra){
         nodoD nodopalabra = new nodoD();
-        nodopalabra.palabra = palabra;
+        nodopalabra.setPalabra(palabra);
         //Validacion para saber si la lista esta vacia
         if(cabeza == null){
             cabeza = nodopalabra;
-            cabeza.sig = null;
+            cabeza.setSig(null);
             cola = cabeza;
         }else{
-            cola.sig = nodopalabra;
-            nodopalabra.sig = null;
+            cola.setSig(nodopalabra);
+            nodopalabra.setSig(null);
             cola = nodopalabra;
         }
     }
@@ -35,8 +36,8 @@ public class ListaDiccionario {
         nodoD actual = new nodoD();
         actual = cabeza;
         while(actual!=null){
-            System.out.println(actual.palabra);
-            actual = actual.sig;
+            System.out.println(actual.getPalabra());
+            actual = actual.getSig();
         }
     }
 }

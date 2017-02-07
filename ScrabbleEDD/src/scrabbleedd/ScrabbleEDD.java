@@ -10,14 +10,14 @@ package scrabbleedd;
 public class ScrabbleEDD {
 
     public static void main(String[] args) {
-//    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
-//
-//    l.ingresarPalabra("Hola");
-//    l.ingresarPalabra("Amigos");
-//    l.ingresarPalabra("de");
-//    l.ingresarPalabra("Snapchat");
-//
-//    l.verLista();
+    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
+
+    l.ingresarPalabra("Hola");
+    l.ingresarPalabra("Amigos");
+    l.ingresarPalabra("de");
+    l.ingresarPalabra("Snapchat");
+
+    l.verLista();
     }
     
 }
