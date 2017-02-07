@@ -1,5 +1,7 @@
 package scrabbleedd;
 
+import scrabbleedd.estructuras.ListaJugadores;
+
 /**
  *  FIUSAC
  *  Estructuras de Datos
@@ -10,14 +12,25 @@ package scrabbleedd;
 public class ScrabbleEDD {
 
     public static void main(String[] args) {
-    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
+        
+     //Probar lista Simple
+//    scrabbleedd.estructuras.ListaDiccionario l = new scrabbleedd.estructuras.ListaDiccionario();
+//
+//    l.ingresarPalabra("Hola");
+//    l.ingresarPalabra("Amigos");
+//    l.ingresarPalabra("de");
+//    l.ingresarPalabra("Snapchat");
+//
+//    l.verLista();
 
-    l.ingresarPalabra("Hola");
-    l.ingresarPalabra("Amigos");
-    l.ingresarPalabra("de");
-    l.ingresarPalabra("Snapchat");
-
-    l.verLista();
+    //Probar Lista Circular
+//    ListaJugadores l = new ListaJugadores();
+//    l.ingresarUsuario("loconluis");
+//    l.ingresarUsuario("loconmona");
+//    l.ingresarUsuario("loconalfredo");
+//    l.ingresarUsuario("loconmarlen");
+//    
+//    l.verListaCircular();
     }
     
 }
