@@ -1,10 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package scrabbleedd;
-
+import scrabbleedd.estructuras.ListaJugadores;
 /**
  *
  * @author luisl
@@ -42,6 +37,11 @@ public class Players extends javax.swing.JFrame {
         lblname.setText("Nombre de Usuario:");
 
         btaddplayer.setText("Agregar Jugador");
+        btaddplayer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btaddplayerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,6 +79,14 @@ public class Players extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btaddplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddplayerActionPerformed
+        String player = txtname.getText();
+        
+        ListaJugadores lp = new ListaJugadores();
+        
+        lp.ingresarUsuario(player);                
+    }//GEN-LAST:event_btaddplayerActionPerformed
 
     /**
      * @param args the command line arguments
