@@ -1,9 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package scrabbleedd;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.SAXException;
+import scrabbleedd.estructuras.ListaDiccionario;
 
 /**
  *
@@ -35,6 +39,11 @@ public class Home extends javax.swing.JFrame {
         setName("jframeHome"); // NOI18N
 
         btRead.setText("LEER ARCHIVO");
+        btRead.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btReadActionPerformed(evt);
+            }
+        });
 
         btPlay.setText("JUGAR");
 
@@ -61,6 +70,26 @@ public class Home extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btReadActionPerformed
+        try {
+            SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+            SAXParser saxParser = saxParserFactory.newSAXParser();
+            File file = new File("C:/Users/luisl/Documents/EDD/Practica1s12017_201114279/ScrabbleEDD/config.xml");
+            LoadXML xml = new LoadXML();
+            
+            saxParser.parse(file, xml);
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        scrabbleedd.estructuras.ListaDiccionario l = new ListaDiccionario();
+        l.verLista();
+    }//GEN-LAST:event_btReadActionPerformed
 
     /**
      * @param args the command line arguments
