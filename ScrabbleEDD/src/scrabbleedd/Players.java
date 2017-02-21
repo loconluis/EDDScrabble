@@ -6,9 +6,8 @@ import scrabbleedd.estructuras.ListaJugadores;
  */
 public class Players extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Players
-     */
+    ListaJugadores lp = new ListaJugadores();
+    
     public Players() {
         initComponents();
     }
@@ -26,6 +25,7 @@ public class Players extends javax.swing.JFrame {
         lblname = new javax.swing.JLabel();
         txtname = new javax.swing.JTextField();
         btaddplayer = new javax.swing.JButton();
+        bt_play = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Scrabble :::: Jugadores");
@@ -40,6 +40,15 @@ public class Players extends javax.swing.JFrame {
         btaddplayer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btaddplayerActionPerformed(evt);
+            }
+        });
+
+        bt_play.setBackground(new java.awt.Color(102, 153, 255));
+        bt_play.setForeground(new java.awt.Color(255, 0, 51));
+        bt_play.setText("Jugar");
+        bt_play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_playActionPerformed(evt);
             }
         });
 
@@ -60,7 +69,9 @@ public class Players extends javax.swing.JFrame {
                         .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(218, 218, 218)
-                        .addComponent(btaddplayer, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btaddplayer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bt_play, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -73,8 +84,10 @@ public class Players extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btaddplayer, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addComponent(btaddplayer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(bt_play, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -82,11 +95,17 @@ public class Players extends javax.swing.JFrame {
 
     private void btaddplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddplayerActionPerformed
         String player = txtname.getText();
+        lp.ingresarUsuario(player);    
+        txtname.setText("");
         
-        ListaJugadores lp = new ListaJugadores();
-        
-        lp.ingresarUsuario(player);                
     }//GEN-LAST:event_btaddplayerActionPerformed
+
+    private void bt_playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_playActionPerformed
+        lp.verListaCircular();
+        this.dispose();
+        Board brd = new Board();
+        brd.show();
+    }//GEN-LAST:event_bt_playActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +143,7 @@ public class Players extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_play;
     private javax.swing.JButton btaddplayer;
     private javax.swing.JLabel lblname;
     private javax.swing.JLabel lblplayer;

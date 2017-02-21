@@ -53,7 +53,7 @@ public class CargarXML {
                     String x = tcasilla.getChildTextTrim("x");
                     String y = tcasilla.getChildTextTrim("y");
                     
-                    System.out.println("X: "+x+" Y: "+y);
+                    //System.out.println("X: "+x+" Y: "+y);
                 }
             }
 
@@ -74,7 +74,7 @@ public class CargarXML {
                     String x = tcasilla.getChildTextTrim("x");
                     String y = tcasilla.getChildTextTrim("y");
                     
-                    System.out.println("X: "+x+" Y: "+y);
+                    //System.out.println("X: "+x+" Y: "+y);
                 }
             }
 
@@ -94,16 +94,20 @@ public class CargarXML {
                     diccionario.ingresarPalabra(palabra);
                     
                     
-                    System.out.println("Palabra "+z+" es: "+palabra);
+                    //System.out.println("Palabra "+z+" es: "+palabra);
                     z++;
                 }
             }            
             
-            diccionario.verLista();
+            //diccionario.verLista();
+            
+            System.out.println("Cargado el archivo XML");
         }catch (JDOMException ex) {
             Logger.getLogger(CargarXML.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error al cargar el archivo XML");
         } catch (IOException ex) {
             Logger.getLogger(CargarXML.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error al cargar el archivo XML");
         }
     }
     

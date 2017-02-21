@@ -84,7 +84,9 @@ public class Home extends javax.swing.JFrame {
         File f = new File(path);
         CargarXML x = new CargarXML();
         x.CargarXML(f);
-        
+        this.hide();
+        Players pl = new Players();
+        pl.show();
     }//GEN-LAST:event_btReadActionPerformed
 
     /**
