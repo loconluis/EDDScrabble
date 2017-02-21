@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ LISTA CIRCULAR
  */
 package scrabbleedd.estructuras;
 
@@ -20,6 +18,7 @@ public class ListaJugadores {
         cola = null;
     }
     
+    //Metodo para ingresar jugadores
     public void ingresarUsuario(String username){
         //nuevo jugador
         nodoJugador jugador = new nodoJugador();
@@ -37,6 +36,28 @@ public class ListaJugadores {
         }
     }
     
+    //Metodo para buscar usuarios
+    public nodoJugador buscarUsuario(String username){
+        nodoJugador buscado = null;
+        nodoJugador actual = cabeza;
+        
+        if(actual==null){
+            System.err.println("No existe el jugador");
+            javax.swing.JOptionPane.showMessageDialog(null, "No hay datos en lista");
+        }else{
+            boolean existe=false;
+            do{
+            
+            }
+             while(buscado.getSig()!=cabeza);
+            if (!existe) {
+                System.err.println("Usuario disponible");
+            }
+        }
+        return buscado;
+    }
+    
+    //Metodo para ver la lista
     public void verListaCircular(){
         nodoJugador actual = new nodoJugador();
         actual = cabeza;

@@ -6,6 +6,15 @@ package scrabbleedd.estructuras;
 public class nodoJugador {
     private String username;
     private nodoJugador sig;
+    private nodoFicha abajo;
+
+    public nodoFicha getAbajo() {
+        return abajo;
+    }
+
+    public void setAbajo(nodoFicha abajo) {
+        this.abajo = abajo;
+    }
 
     /**
      * @return the username

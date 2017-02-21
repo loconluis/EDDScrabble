@@ -31,8 +31,35 @@ public class ListaDiccionario {
             cola = nodopalabra;
         }
     }
-    //Mostrar la lista
     
+    //Metodo de buscarNodo
+    public nodoD buscarPalabra(String palabra){
+        nodoD buscado = null;
+        nodoD actual = cabeza;
+        
+        if(actual==null){
+            System.err.println("No existe la palabra");
+            javax.swing.JOptionPane.showMessageDialog(null, "No hay datos en la lista");
+        }else{
+            boolean existe=false;
+            while(actual !=null){
+                if(actual.getPalabra().equalsIgnoreCase(palabra)){
+                    existe = true;
+                    buscado = actual;
+                    javax.swing.JOptionPane.showMessageDialog(null, "¡¡¡ACERTASTE!!! Tu palabra coincide");
+                    System.out.println("Palabra encontrada");
+                }
+                actual = actual.getSig();
+            }
+            if (!existe) {
+                javax.swing.JOptionPane.showMessageDialog(null, "¡¡¡FALLASTE!!! Tu palabra no coincide");
+                System.err.println("Palabra no encontrada en el diccionario");
+            }
+        }
+        return buscado;
+    }
+
+    //Mostrar la lista    
     public void verLista(){
         nodoD actual = new nodoD();
         actual = cabeza;
