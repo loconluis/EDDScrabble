@@ -13,11 +13,11 @@ import org.jdom2.input.SAXBuilder;
 
 public class CargarXML {
     
-    public void CargarXML(){
+    public void CargarXML(File xml){
         SAXBuilder builder = new SAXBuilder();
-        File xmlFile = new File("config.xml");
+//        File xmlFile = new File("config.xml");
         try {
-            Document document = (Document) builder.build(xmlFile);
+            Document document = (Document) builder.build(xml);
             //Obtengo la raiz principal <scrabble>
             Element rootNode = document.getRootElement();
             

@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -73,8 +74,16 @@ public class Home extends javax.swing.JFrame {
 
     private void btReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btReadActionPerformed
         //Variable Chooser
+        JFileChooser examinar = new JFileChooser();
+        String path="";
+        int opcion = examinar.showOpenDialog(this);
+        if (opcion == JFileChooser.APPROVE_OPTION) {
+            path = examinar.getSelectedFile().getPath();
+        }
         
-        
+        File f = new File(path);
+        CargarXML x = new CargarXML();
+        x.CargarXML(f);
         
     }//GEN-LAST:event_btReadActionPerformed
 
