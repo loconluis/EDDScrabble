@@ -1,5 +1,5 @@
 <scrabble>
-      <dimension>20</dimension>
+      <dimension>30</dimension>
       <dobles>
           <casilla>
             <x>2</x>
@@ -33,5 +33,17 @@
           <palabra>primera</palabra>
           <palabra>correo</palabra>
           <palabra>juego</palabra>
+          <palabra>adios</palabra>
+          <palabra>mundo2</palabra>
+          <palabra>como2</palabra>
+          <palabra>estas2</palabra>
+          <palabra>uno2</palabra>
+          <palabra>dos2</palabra>
+          <palabra>tres2</palabra>
+          <palabra>universidad2</palabra>
+          <palabra>practica2</palabra>
+          <palabra>primera2</palabra>
+          <palabra>correo2</palabra>
+          <palabra>juego2</palabra>
       </diccionario>
 </scrabble>
