@@ -2,22 +2,22 @@
       <dimension>20</dimension>
       <dobles>
           <casilla>
-          <x>2</x>
-          <y>5</y>
+            <x>2</x>
+            <y>5</y>
           </casilla>
           <casilla>
-          <x>7</x>
-          <y>9</y>
+            <x>7</x>
+            <y>9</y>
           </casilla>
       </dobles>
       <triples>
           <casilla>
-          <x>20</x>
-          <y>20</y>
+            <x>20</x>
+            <y>20</y>
           </casilla>
           <casilla>
-          <x>1</x>
-          <y>1</y>
+            <x>1</x>
+            <y>1</y>
           </casilla>
       </triples>
       <diccionario>

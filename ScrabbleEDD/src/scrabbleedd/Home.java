@@ -72,23 +72,10 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btReadActionPerformed
-        try {
-            SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
-            SAXParser saxParser = saxParserFactory.newSAXParser();
-            File file = new File("C:/Users/luisl/Documents/EDD/Practica1s12017_201114279/ScrabbleEDD/config.xml");
-            LoadXML xml = new LoadXML();
-            
-            saxParser.parse(file, xml);
-        } catch (ParserConfigurationException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SAXException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //Variable Chooser
         
-        scrabbleedd.estructuras.ListaDiccionario l = new ListaDiccionario();
-        l.verLista();
+        
+        
     }//GEN-LAST:event_btReadActionPerformed
 
     /**
