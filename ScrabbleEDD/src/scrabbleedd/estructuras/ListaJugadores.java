@@ -84,11 +84,12 @@ public class ListaJugadores {
             if(aux==null){
                 System.err.println("nada en la lista");
             }else{
-                while(aux.getSig() !=null){
+                while(aux.getSig() !=cabeza){
                     System.err.println(aux.getUsername()+"->"+aux.getSig().getUsername());
                     wr.write(aux.getUsername()+"->"+aux.getSig().getUsername()+"\n");
                     aux = aux.getSig();
                 }
+                wr.write(aux.getUsername()+"->"+aux.getSig().getUsername()+"\n");
             }
             wr.write("}\n");
             

@@ -58,8 +58,54 @@ public class ListaFichas {
         return buscado;
     }
     
-    //Ver lista ficha
+    public void llenado(){
+        for (int i = 0; i < 12; i++) {
+            ingresarFicha("A");
+            ingresarFicha("E");
+        }
+        
+        for (int i = 0; i < 9; i++) {
+            ingresarFicha("O");
+        }
+        
+        for (int i = 0; i < 6; i++) {
+            ingresarFicha("I");
+            ingresarFicha("S");
+        }
+        for (int i = 0; i < 5; i++) {
+            ingresarFicha("N");
+            ingresarFicha("D");
+            ingresarFicha("R");
+            ingresarFicha("U");
+        }
+        for (int i = 0; i < 4; i++) {
+            ingresarFicha("L");
+            ingresarFicha("T");
+            ingresarFicha("C");
+        }
+        
+        for (int i = 0; i < 2; i++) {
+            ingresarFicha("G");
+            ingresarFicha("B");
+            ingresarFicha("M");
+            ingresarFicha("P");
+            ingresarFicha("H");
+        }
+        
+        for (int i = 0; i < 1; i++) {
+            ingresarFicha("F");
+            ingresarFicha("V");
+            ingresarFicha("Y");
+            ingresarFicha("Q");
+            ingresarFicha("J");
+            ingresarFicha("Ñ");
+            ingresarFicha("X");
+            ingresarFicha("Z");
+        }
+    }
     
+    
+    //Ver lista ficha
     
     //Graficar la lista
     public void Graficar(){

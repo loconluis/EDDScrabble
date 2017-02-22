@@ -1,4 +1,6 @@
 package scrabbleedd;
+import scrabbleedd.estructuras.ColaFichas;
+import scrabbleedd.estructuras.ListaFichas;
 import scrabbleedd.estructuras.ListaJugadores;
 /**
  *
@@ -7,6 +9,8 @@ import scrabbleedd.estructuras.ListaJugadores;
 public class Players extends javax.swing.JFrame {
 
     ListaJugadores lp = new ListaJugadores();
+    ListaFichas lf = new ListaFichas();
+    ColaFichas cf = new ColaFichas();
     
     public Players() {
         initComponents();
@@ -103,8 +107,25 @@ public class Players extends javax.swing.JFrame {
     private void bt_playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_playActionPerformed
         lp.verListaCircular();
         this.dispose();
+        
+        //Agregar fichas 
+        cf.llenado();
+        lp.Graficar();
+        cf.Graficar();
+        cf.verLista();
+        
+        //
+
+        
+        //Graficar lista de jugadores y fichas
+        
+        
+        
+        
+        
         Board brd = new Board();
         brd.show();
+        
     }//GEN-LAST:event_bt_playActionPerformed
 
     /**
@@ -150,3 +171,4 @@ public class Players extends javax.swing.JFrame {
     private javax.swing.JTextField txtname;
     // End of variables declaration//GEN-END:variables
 }
+
