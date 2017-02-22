@@ -15,6 +15,7 @@ public class Players extends javax.swing.JFrame {
     
     public Players() {
         initComponents();
+        cf.llenado();
     }
 
     /**
@@ -126,14 +127,15 @@ public class Players extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btaddplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddplayerActionPerformed
+        ListaFichas lf = new ListaFichas();
+        crearLista(cf, lf);
         nodoFicha p = lf.obtenerCabezaa();
-        lf.crearLista(cf);
         
         String player = txtname.getText();
         lp.ingresarUsuario(player,p);   
 
         txtname.setText("");
-        
+        lf.Graficar();
     }//GEN-LAST:event_btaddplayerActionPerformed
 
     private void bt_playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_playActionPerformed
@@ -142,7 +144,6 @@ public class Players extends javax.swing.JFrame {
         
         //Agregar fichas 
         lp.Graficar();
-        cf.llenado();
         cf.Graficar();
         cf.verLista();
         
@@ -213,7 +214,14 @@ public class Players extends javax.swing.JFrame {
     private javax.swing.JTextField txtname;
     // End of variables declaration//GEN-END:variables
 
-    
+    public void crearLista(ColaFichas cf, ListaFichas aux){
+        for (int i = 0; i < 7; i++) {
+            nodoFicha ingreso = cf.obtener();
+            String letra = ingreso.getLetra();
+            cf.popFicha();
+            aux.ingresarFicha(letra);
+        }
+    }
 
 }
 
