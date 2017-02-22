@@ -8,7 +8,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.SAXException;
+import scrabbleedd.estructuras.ColaFichas;
 import scrabbleedd.estructuras.ListaDiccionario;
+import scrabbleedd.estructuras.ListaFichas;
 
 /**
  *
@@ -16,7 +18,8 @@ import scrabbleedd.estructuras.ListaDiccionario;
  */
 public class Home extends javax.swing.JFrame {
 
-    ListaDiccionario di = new ListaDiccionario();
+    
+    public ColaFichas cf = new ColaFichas();
     
     /**
      * Creates new form Home
@@ -87,6 +90,9 @@ public class Home extends javax.swing.JFrame {
         CargarXML x = new CargarXML();
         x.CargarXML(f);
         this.hide();
+//        cf.llenado();
+//        cf.Graficar();
+//        cf.verLista();
         Players pl = new Players();
         pl.show();
         

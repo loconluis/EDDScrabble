@@ -36,44 +36,95 @@ public class ColaFichas {
     }
     
     //Desencolar
+    public void popFicha(){
+        if (cabeza!=null) {
+            nodoFicha aux = cabeza;
+            cabeza = cabeza.getSig();
+            aux.setSig(null);
+            if (cabeza ==null) {
+                cola = null;
+            }
+            
+            System.out.println("Se elimino: "+aux.getLetra());
+        }
+    }
     
+    public nodoFicha obtener(){
+        if (cabeza == null) {
+            return null;
+        }else{
+            return cabeza;
+        }
+    }
     
     //llenado
     public void llenado(){
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 13; i++) {
             ingresarFicha("A");
+         
+        }
+        for (int i = 0; i < 13; i++) {
+         
             ingresarFicha("E");
         }
         
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             ingresarFicha("O");
         }
         
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 7; i++) {
             ingresarFicha("I");
+        
+        }
+        for (int i = 0; i < 7; i++) {
+        
             ingresarFicha("S");
         }
-        for (int i = 0; i < 5; i++) {
+        
+        for (int i = 0; i < 6; i++) {
             ingresarFicha("N");
+        }
+        for (int i = 0; i < 6; i++) {
             ingresarFicha("D");
+        }
+        
+        for (int i = 0; i < 6; i++) {
             ingresarFicha("R");
+        }
+        
+        for (int i = 0; i < 6; i++) {
             ingresarFicha("U");
         }
-        for (int i = 0; i < 4; i++) {
-            ingresarFicha("L");
+        
+        for (int i = 0; i < 5; i++) {
             ingresarFicha("T");
+        }
+        for (int i = 0; i < 5; i++) {
+            ingresarFicha("L");
+        }
+        
+        for (int i = 0; i < 5; i++) {
             ingresarFicha("C");
         }
         
-        for (int i = 0; i < 2; i++) {
+        
+        for (int i = 0; i < 3; i++) {
             ingresarFicha("G");
+        }
+        for (int i = 0; i < 3; i++) {
             ingresarFicha("B");
-            ingresarFicha("M");
-            ingresarFicha("P");
-            ingresarFicha("H");
         }
         
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 3; i++) {
+            ingresarFicha("M");
+        }
+        for (int i = 0; i < 3; i++) {         
+            ingresarFicha("P");
+        }
+        for (int i = 0; i < 3; i++) {
+            ingresarFicha("H");
+        }
+        for (int i = 0; i < 2; i++) {
             ingresarFicha("F");
             ingresarFicha("V");
             ingresarFicha("Y");

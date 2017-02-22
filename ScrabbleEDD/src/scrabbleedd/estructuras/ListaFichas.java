@@ -104,6 +104,22 @@ public class ListaFichas {
         }
     }
     
+    public nodoFicha obtenerCabezaa(){
+        if(cabeza==null){
+            return null;
+        }else{
+            return cabeza;
+        }
+    }
+    
+    public void crearLista(ColaFichas cf){
+        ListaFichas lf = new ListaFichas();
+        for (int i = 0; i < 7; i++) {
+            nodoFicha ingreso = cf.obtener();
+            cf.popFicha();
+            lf.ingresarFicha(ingreso.getLetra());
+        }
+    }
     
     //Ver lista ficha
     

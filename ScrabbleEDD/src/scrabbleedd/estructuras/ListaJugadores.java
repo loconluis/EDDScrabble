@@ -25,7 +25,7 @@ public class ListaJugadores {
     }
     
     //Metodo para ingresar jugadores
-    public void ingresarUsuario(String username){
+    public void ingresarUsuario(String username, nodoFicha f){
         //nuevo jugador
         nodoJugador jugador = new nodoJugador();
         jugador.setUsername(username);
@@ -35,6 +35,7 @@ public class ListaJugadores {
             cabeza = jugador;
             cola = cabeza;
             cabeza.setSig(cola);
+            cabeza.setAbajo(f);
         }else{
             cola.setSig(jugador);
             jugador.setSig(cabeza);
@@ -62,6 +63,8 @@ public class ListaJugadores {
         }
         return buscado;
     }
+    
+    
     
     //Metodo para ver la lista
     public void verListaCircular(){
