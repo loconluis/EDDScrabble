@@ -114,6 +114,7 @@ public class ListaDiccionario {
     
     }
 
+    //Codigo Generico para graphiz en consola
     private void getGraphiz() {
         try {
             String dot = "C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";

@@ -1,5 +1,11 @@
 package scrabbleedd.estructuras;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class ListaFichas {
     //Variables
     nodoFicha cabeza;
@@ -53,4 +59,71 @@ public class ListaFichas {
     }
     
     //Ver lista ficha
+    
+    
+    //Graficar la lista
+    public void Graficar(){
+        String path = "C:\\Users\\luisl\\Documents\\EDD\\Practica1s12017_201114279\\ScrabbleEDD\\Grafos\\fichas.dot";
+        try {
+            FileWriter wr = new FileWriter(path);
+            wr.write("digraph G{ \n");
+            nodoFicha aux = cabeza;
+            
+            if(aux==null){
+                System.err.println("nada en la lista");
+            }else{
+                while(aux.getSig() !=null){
+                    System.err.println(aux.getLetra()+"->"+aux.getSig().getLetra());
+                    wr.write(aux.getLetra()+"->"+aux.getSig().getLetra()+"\n");
+                    aux = aux.getSig();
+                }
+            }
+            wr.write("}\n");
+            
+            wr.close();
+            
+            FileReader leer = new FileReader(path);
+            int x = leer.read();
+            
+            while(x!=-1){
+                x=leer.read();
+            }
+            leer.close();
+            
+            getGraphiz();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(ListaDiccionario.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("ERROR AL INTENTAR GRAFICAR");
+        }
+    
+    }
+
+    //Codigo Generico para graphiz en consola
+    private void getGraphiz() {
+        try {
+            String dot = "C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
+
+            String grafo = "C:\\Users\\luisl\\Documents\\EDD\\Practica1s12017_201114279\\ScrabbleEDD\\Grafos\\fichas.dot";      
+            String img_grafo = "C:\\Users\\luisl\\Documents\\EDD\\Practica1s12017_201114279\\ScrabbleEDD\\Grafos\\fichas.jpg";
+
+            String tParam = "-Tjpg";
+            String tOParam = "-o";
+
+            String[] cmd = new String[5];
+            cmd[0] = dot;
+            cmd[1] = tParam;
+            cmd[2] = grafo;
+            cmd[3] = tOParam;
+            cmd[4] = img_grafo;
+
+            Runtime rt = Runtime.getRuntime();
+             System.out.println(rt.toString());
+            rt.exec( cmd );
+
+          } catch (Exception ex) {
+            //ex.printStackTrace();
+              System.out.println("ERROR AL LLAMAR GRAPH DESDE CONSOLA");
+          }
+    }
 }
