@@ -100,6 +100,7 @@ public class CargarXML {
             }            
             
             //diccionario.verLista();
+            diccionario.Graficar();
             
             System.out.println("Cargado el archivo XML");
         }catch (JDOMException ex) {

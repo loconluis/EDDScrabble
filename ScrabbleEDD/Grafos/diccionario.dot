@@ -1,0 +1,25 @@
+digraph G{ 
+hola->mundo
+mundo->como
+como->estas
+estas->uno
+uno->dos
+dos->tres
+tres->universidad
+universidad->practica
+practica->primera
+primera->correo
+correo->juego
+juego->adios
+adios->mundo2
+mundo2->como2
+como2->estas2
+estas2->uno2
+uno2->dos2
+dos2->tres2
+tres2->universidad2
+universidad2->practica2
+practica2->primera2
+primera2->correo2
+correo2->juego2
+}

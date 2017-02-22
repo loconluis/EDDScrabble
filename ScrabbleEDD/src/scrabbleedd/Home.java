@@ -16,6 +16,8 @@ import scrabbleedd.estructuras.ListaDiccionario;
  */
 public class Home extends javax.swing.JFrame {
 
+    ListaDiccionario di = new ListaDiccionario();
+    
     /**
      * Creates new form Home
      */
@@ -87,6 +89,7 @@ public class Home extends javax.swing.JFrame {
         this.hide();
         Players pl = new Players();
         pl.show();
+        
     }//GEN-LAST:event_btReadActionPerformed
 
     /**
